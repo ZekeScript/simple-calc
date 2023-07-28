@@ -27,7 +27,7 @@
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 .button {
@@ -48,7 +48,6 @@
   color: #ffa500;
 }
 .equals {
-  grid-column: span 3;
   background-color: #ffa500;
   color: #ffff;
 }
@@ -56,6 +55,7 @@
   background-color: #ff8c00;
 }
 .clean {
+  grid-column: span 2;
   background-color: #C21923;
   color: #ffff;
 }
