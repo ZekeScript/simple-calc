@@ -45,6 +45,7 @@
   transform: scale(1.04);
 }
 .operator {
+  font-weight: 600;
   color: #ffa500;
 }
 .equals {
