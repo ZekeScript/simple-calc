@@ -80,3 +80,22 @@
   margin: -5px;
   width: 25px;
 }
+
+footer {
+  position:fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  color: var(--subtitle-font-color);
+  z-index: -90;
+}
+
+.signature {
+  margin-top: 5px;
+}
+.signature__author {
+  font-weight: bold;
+}
