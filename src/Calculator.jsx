@@ -14,6 +14,7 @@ function App () {
 
   const handleCalculate = () => {
     try {
+      // eslint-disable-next-line no-eval
       const res = eval(expression)
       setLastExpression(expression)
       setExpression(res.toString())
