@@ -1,32 +1,13 @@
 // @ts-check
-const { test, expect } = require('@playwright/test')
+import { test, expect } from '@playwright/test'
 
 const LOCALHOST_URL = 'http://localhost:5173/'
 
-test('Addition Test', async ({ page }) => {
+test('handleButtonClick adds the value to the expression', async ({ page }) => {
   await page.goto(LOCALHOST_URL)
-})
+  const button = await page.$('#seven')
+  button.click()
 
-test('Subtraction Test', async ({ page }) => {
-  await page.goto(LOCALHOST_URL)
-})
-
-test('Multiplication Test', async ({ page }) => {
-  await page.goto(LOCALHOST_URL)
-})
-
-test('Division Test', async ({ page }) => {
-  await page.goto(LOCALHOST_URL)
-})
-
-test('AC Button Test', async ({ page }) => {
-  await page.goto(LOCALHOST_URL)
-})
-
-test('DEL Button Test', async ({ page }) => {
-  await page.goto(LOCALHOST_URL)
-})
-
-test('Input Validation Test', async ({ page }) => {
-  await page.goto(LOCALHOST_URL)
+  const screen = await getByText('screen')
+  expect(screen.textContent).toBe('7')
 })
